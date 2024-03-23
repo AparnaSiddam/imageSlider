@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+img{
+    vertical-align: middle;
+    max-height: 600px;
+}
+
+.container{
+    position: relative;
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+.num{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+}
+
+.text{
+    position: absolute;
+    bottom: 10px;
+    left: -500px;
+    text-align: center;
+    color: #fff;
+    background-color: #555;
+    padding: 10px;
+    animation: leftEnter 1s forwards;
+
+}
+
+@keyframes leftEnter {
+    from{
+        left: -500px;
+    }    
+    to{
+        left: 0;
+    }
+}
+
+#prev, #next{
+    position: absolute;
+    top: 50%;
+    color: #000;
+    font-size: 30px;
+    margin-top: -40px;
+    width: auto;
+    padding: 5px;
+    transition: 0.5s;
+    background-color: #fff;
+    border-radius: 50%;
+}
+#prev{
+    left: 5px;
+}
+#next{
+    right: 5px;
+}
+
+#prev:hover, #next:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+
+.dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.dot{
+    width: 15px;
+    height: 15px;
+    background-color: #999;
+    border-radius: 50%;
+}
+
+.dot:hover{
+    background-color: #555;
+}
+
+.fade{
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0.4;
+    }
+    to{
+        opacity: 1;
+    }
+}
